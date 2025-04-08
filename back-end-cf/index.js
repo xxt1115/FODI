@@ -1,13 +1,12 @@
-/**
- * EXPOSE_PATH：暴露路径，如全盘展示请留空，否则按 '/媒体/音乐' 的格式填写
- * ONEDRIVE_REFRESHTOKEN: refresh_token
- * PASSWD_FILENAME: 密码文件名
- * PROTECTED_LAYERS: EXPOSE_PATH 目录密码防护层数，防止猜测目录，默认 -1 为关闭，类似 '/Applications' 需要保护填写为 2（保护 EXPOSE_PATH 及其一级子目录），开启需在 EXPORSE_PATH 目录的 PASSWORD_FILENAME 文件中填写密码
- */
-const EXPOSE_PATH = '';
-const ONEDRIVE_REFRESHTOKEN = '';
-const PASSWD_FILENAME = '.password';
+const EXPOSE_PATH = "home1test";
+const ONEDRIVE_REFRESHTOKEN = "M.C548_BAY.0.U.-ChKLMJCqEiEY68OiVvEAbkVZfaZVIN7WfkmQplxF790C35wt!!4tFHuW6vI9kdW8VAfGdV!GR6RmQjVQJxzB*1W8kjIvIbuOBPKZB0wbxEK49wlirMnn7P4wB1VXijEJZn1qe7cCKSXKa*v3N9XgmwMAdLQ4giALA6wxa3l9YZu5O5mgksZIHiYu296eRXjy5Q6KwX6tlkaHp*yBN4sGG3*i9dIXiMyjeL9X1z!kVdfDiC2d9EtDEP1R7*dlyrL91TTr3VtJy7UensHfJxygWdxUbCOz!mAjVyZkZBjwiOytIiHciWgJ4fEY5Qm36BRzK5bOHWMV0wCNsKuRZOYmKgvyNMcPiCtCYq6kjhAPG9pNm6FhhDJy0Ud1wKKY3*UyBj9Ttz!jDes2pZmRvtplDbM$";
+const PASSWD_FILENAME = ".password";
 const PROTECTED_LAYERS = -1;
+const clientId = "78d4dc35-7e46-42c6-9023-2d39314433a5";
+const clientSecret = "ZudGl-p.m=LMmr3VrKgAyOf-WevB3p50";
+const loginHost = "https://login.microsoftonline.com";
+const apiHost = "https://graph.microsoft.com";
+const redirectUri = "http://localhost/onedrive-login"
 
 addEventListener('scheduled', (event) => {
   event.waitUntil(fetchAccessToken());
